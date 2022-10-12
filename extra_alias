@@ -24,6 +24,7 @@ alias stt='git status'
 alias gc='git clone'
 alias gr='git rebase -i'
 alias gra='git rebase --abort'
+alias grc='git rebase --continue'
 
 # github
 alias phub='git push  https://github.com/arikhativa/$(basename `git rev-parse --show-toplevel`)'
