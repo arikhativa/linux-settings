@@ -15,6 +15,7 @@ alias drm='docker rm -f '
 # git
 alias add='git add .'
 alias cmt='git commit -m '
+alias change_cmt='git commit --amend'
 alias push='git push'
 alias pull='git pull'
 alias gco='git checkout'
