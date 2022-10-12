@@ -13,6 +13,7 @@ alias drmall='docker rm -f $(docker ps -a -q)'
 alias drm='docker rm -f '
 
 # git
+alias gl='git log'
 alias add='git add .'
 alias cmt='git commit -m '
 alias change_cmt='git commit --amend'
