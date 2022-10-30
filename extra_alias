@@ -42,4 +42,5 @@ alias g='gcc -Wall -Werror -Wextra'
 # Shell
 alias t='touch '
 alias c='cat '
-alias val='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes '
+alias val='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=/tmp/val.log'
+alias vlog='code /tmp/val.log'
