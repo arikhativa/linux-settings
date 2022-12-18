@@ -36,8 +36,9 @@ alias pullhub='git pull  https://github.com/arikhativa/$(basename `git rev-parse
 alias myalias='code ~/linux-settings/extra_alias'
 
 # 42
-alias norm='norminette -R CheckForbiddenSourceHeader | grep -v OK'
+alias norm='norminette | grep -v OK'
 alias g='gcc -Wall -Werror -Wextra'
+alias gg='c++ -Wall -Werror -Wextra -std=c++98 -pedantic'
 
 # Shell
 alias t='touch '
