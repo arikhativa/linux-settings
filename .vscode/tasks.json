@@ -1,0 +1,18 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "New Class",
+			"type": "shell",
+			"command": "/Users/yrabby/linux-settings/scripts/create_cpp_class.sh ${input:param1}",
+			"problemMatcher": []
+		}
+	],
+	"inputs": [
+        {
+            "id": "param1",
+            "description": "write class name UpperCamleCase -> ClassName",
+            "type": "promptString"
+        },
+    ]
+}
