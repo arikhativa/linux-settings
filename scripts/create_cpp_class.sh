@@ -9,7 +9,7 @@ create_cpp_class()
 {
 	local name_uppercamlecase=$1
 	local name_lowercase=$(echo $1 | tr '[:upper:]' '[:lower:]')
-	local name_upcase=$(echo $1 | tr '[:lower:]' '[:upper:]')
+	local name_upcase=$(echo $1 | perl -ne 'print lc(join("_", split(/(?=[A-Z])/)))' | tr '[:lower:]' '[:upper:]')
 
 	cat $HOME/$REPO/$RES/$FILE_H | sed -e "s/REPLACE/$name_upcase/g" | sed -e "s/Replace/$name_uppercamlecase/g" > ./$name_uppercamlecase.hpp
 	cat $HOME/$REPO/$RES/$FILE_C | sed -e "s/Replace/$name_uppercamlecase/g" > ./$name_uppercamlecase.cpp
