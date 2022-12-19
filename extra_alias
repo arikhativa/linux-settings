@@ -34,6 +34,7 @@ alias pullhub='git pull  https://github.com/arikhativa/$(basename `git rev-parse
 
 # files
 alias myalias='code ~/linux-settings/extra_alias'
+alias cla='~/linux-settings/scripts/create_cpp_class.sh '
 
 # 42
 alias norm='norminette | grep -v OK'
