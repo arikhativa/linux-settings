@@ -5,6 +5,11 @@ function dx() {
    docker exec -it $1 bash
 }
 
+# k8
+alias k='kubectl'
+alias ka='kubectl apply -k ./'
+alias kd='kubectl delete -k ./'
+
 # docker
 alias dlogs='docker logs '
 alias dls='docker image ls'
@@ -16,7 +21,7 @@ alias drm='docker rm -f '
 alias gl='git log'
 alias add='git add .'
 alias cmt='git commit -m '
-alias change_cmt='git commit --amend'
+alias ccmt='git commit --amend'
 alias push='git push'
 alias pull='git pull'
 alias gco='git checkout'
@@ -38,10 +43,11 @@ alias myalias='code ~/linux-settings/extra_alias'
 # 42
 alias norm='norminette -R CheckForbiddenSourceHeader | grep -v OK'
 alias g='gcc -Wall -Werror -Wextra'
+alias gp='g++ -Wall -Werror -Wextra'
 
 # Shell
 alias t='touch '
 alias c='cat '
-alias val='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=/tmp/val.log'
-alias hal='valgrind --log-file=/tmp/val.log --tool=helgrind'
+alias val='valgrind --track-fds=yes --suppressions=/home/yoav/val.supp --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=/tmp/val.log'
+alias hel='valgrind --log-file=/tmp/val.log --tool=helgrind'
 alias vlog='code /tmp/val.log'
