@@ -9,6 +9,7 @@ function dx() {
 alias k='kubectl'
 alias ka='kubectl apply -k ./'
 alias kd='kubectl delete -k ./'
+alias kgp='kubectl get pods'
 
 # docker
 alias dlogs='docker logs '
@@ -39,9 +40,11 @@ alias pullhub='git pull  https://github.com/arikhativa/$(basename `git rev-parse
 
 # files
 alias myalias='code ~/linux-settings/extra_alias'
+alias cla='~/linux-settings/scripts/create_cpp_class.sh '
+alias cclass='~/linux-settings/scripts/create_c_class.sh '
 
 # 42
-alias norm='norminette -R CheckForbiddenSourceHeader | grep -v OK'
+alias norm='norminette | grep -v OK'
 alias g='gcc -Wall -Werror -Wextra'
 alias gp='g++ -Wall -Werror -Wextra'
 
@@ -51,3 +54,12 @@ alias c='cat '
 alias val='valgrind --track-fds=yes --suppressions=/home/yoav/val.supp --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=/tmp/val.log'
 alias hel='valgrind --log-file=/tmp/val.log --tool=helgrind'
 alias vlog='code /tmp/val.log'
+
+# wsl
+# sudo chmod 666 /etc/resolv.conf
+# echo nameserver 8.8.8.8 >> /etc/resolv.conf
+# echo nameserver 8.8.4.4 >> /etc/resolv.conf
+# echo nameserver 1.1.1.1 >> /etc/resolv.conf
+
+# minilibx
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | head -n 1 | awk '{print $2}'):0.0
