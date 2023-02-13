@@ -6,7 +6,7 @@
 /*   By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 14:00:59 by yrabby            #+#    #+#             */
-/*   Updated: 2023/02/13 11:54:48 by yrabby           ###   ########.fr       */
+/*   Updated: 2023/02/13 12:01:50 by yrabby           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ typedef struct s_Replace
 }				t_Replace;
 
 t_Replace	*Replace_create(void);
-void		Replace_free(t_image *obj);
+void		Replace_destroy(t_image *obj);
 
 #endif
