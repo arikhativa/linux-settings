@@ -6,7 +6,7 @@
 /*   By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 14:00:59 by yrabby            #+#    #+#             */
-/*   Updated: 2023/02/13 12:09:14 by yrabby           ###   ########.fr       */
+/*   Updated: 2023/02/13 12:09:56 by yrabby           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ t_Replace	*Replace_create(void)
 
 void	Replace_destroy(t_Replace *obj)
 {
-	bzero(obj, sizeof(t_Replace));
+	ft_bzero(obj, sizeof(t_Replace));
 	free(obj);
 }
