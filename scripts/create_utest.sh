@@ -26,9 +26,10 @@ func()
 
 	TMP_H=/tmp/unit_test.h
 	CUR_H=./$HEAD_DIR/unit_test.h
-	TXT="\/\/ $name_lowercase\nvoid\t$func_declaration(void);\n\n#endif\n"
+	TXT="\/\/ $name_lowercase\nvoid\t$func_declaration(void);\n\n#endif"
 	CMD=$(echo "s/\#endif/$TXT/g")
-	cp $CUR_H $TMP_H | cat $TMP_H | sed -e "$CMD" > $CUR_H.h
+	cp $CUR_H $TMP_H 
+	cat $TMP_H | sed -e "$CMD" > $CUR_H
 	rm $TMP_H
 }
 

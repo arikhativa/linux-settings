@@ -6,24 +6,33 @@
 /*   By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 14:00:59 by yrabby            #+#    #+#             */
-/*   Updated: 2023/02/13 12:09:56 by yrabby           ###   ########.fr       */
+/*   Updated: 2023/02/14 10:48:51 by yrabby           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Replace.h"
 
-t_Replace	*Replace_create(void)
+t_error_code	Replace_create(t_Replace **ret)
 {
-	t_Replace	*ret;
-
-	ret = (t_Replace *)ft_calloc(1, sizeof(t_Replace));
-	if (!ret)
-		return (NULL);
-	return (ret);
+	if (ret && *ret)
+	{
+		*ret = (t_Replace *)ft_calloc(1, sizeof(t_Replace));
+		if (!*ret)
+			return (ERROR);
+		return (SUCCESS);
+	}
+	return (ERROR);
 }
 
-void	Replace_destroy(t_Replace *obj)
+void	Replace_destroy(t_Replace **obj)
 {
-	ft_bzero(obj, sizeof(t_Replace));
-	free(obj);
+	t_Replace	*tmp;
+
+	if (obj && *obj)
+	{
+		tmp = *obj;
+		ft_bzero(tmp, sizeof(t_Replace));
+		free(tmp);
+		*obj = NULL;
+	}
 }
