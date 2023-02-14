@@ -9,7 +9,7 @@ SRC_DIR=src
 HEAD_DIR=include
 CLASS_DIR=
 
-create_cpp_class()
+func()
 {
 	local name_uppercamlecase=$1
 	local name_lowercase=$(echo $1 | tr '[:upper:]' '[:lower:]')
@@ -24,4 +24,4 @@ create_cpp_class()
 	cat $HOME/$REPO/$RES/$FILE_C | sed -e "s/Replace/$name_uppercamlecase/g" > ./$CLASS_DIR/$name_uppercamlecase.c
 }
 
-create_cpp_class $1
+func $1

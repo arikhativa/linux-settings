@@ -42,6 +42,7 @@ alias pullhub='git pull  https://github.com/arikhativa/$(basename `git rev-parse
 alias myalias='code ~/linux-settings/extra_alias'
 alias cla='~/linux-settings/scripts/create_cpp_class.sh '
 alias cclass='~/linux-settings/scripts/create_c_class.sh '
+alias utest='~/linux-settings/scripts/create_utest.sh '
 
 # 42
 alias norm='norminette | grep -v OK'
