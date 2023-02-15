@@ -16,8 +16,6 @@ search_replace_file()
 	local txt=$3
 
 	local cmd="s/$mark/$txt/g"
-	echo cmd
-	echo $cmd
 	local tmp=/tmp/utest_tmp_swap
 	cp $file $tmp 
 	cat $tmp | sed -e "$cmd" > $file
