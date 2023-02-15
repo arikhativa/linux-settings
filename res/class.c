@@ -6,7 +6,7 @@
 /*   By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 14:00:59 by yrabby            #+#    #+#             */
-/*   Updated: 2023/02/14 10:48:51 by yrabby           ###   ########.fr       */
+/*   Updated: 2023/02/15 13:37:33 by yrabby           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_error_code	Replace_create(t_Replace **ret)
 {
-	if (ret && *ret)
+	if (ret)
 	{
 		*ret = (t_Replace *)ft_calloc(1, sizeof(t_Replace));
 		if (!*ret)
