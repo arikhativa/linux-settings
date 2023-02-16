@@ -30,7 +30,7 @@ void	Replace_destroy(t_Replace **obj)
 {
 	t_Replace	*tmp;
 
-	if (!obj && !*obj)
+	if (!obj || !*obj)
 		return ;
 	tmp = *obj;
 	ft_bzero(tmp, sizeof(t_Replace));

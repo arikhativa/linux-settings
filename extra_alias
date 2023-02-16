@@ -52,7 +52,7 @@ alias gp='g++ -Wall -Werror -Wextra'
 # Shell
 alias t='touch '
 alias c='cat '
-alias val='valgrind --track-fds=yes --suppressions=/home/yoav/val.supp --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=/tmp/val.log'
+alias val='valgrind --track-fds=yes --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=/tmp/val.log'
 alias hel='valgrind --log-file=/tmp/val.log --tool=helgrind'
 alias vlog='code /tmp/val.log'
 
