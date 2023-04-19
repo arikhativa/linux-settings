@@ -45,7 +45,7 @@ alias cclass='~/linux-settings/scripts/create_c_class.sh '
 alias utest='~/linux-settings/scripts/create_utest.sh '
 
 # 42
-alias code='~/Downloads/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
+alias code='/Applications/Visual\ Studio\ Code\ 2.app/Contents/Resources/app/bin/code'
 alias norm='norminette | grep -v OK'
 alias g='gcc -Wall -Werror -Wextra'
 alias gp='g++ -Wall -Werror -Wextra'
