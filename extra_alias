@@ -2,7 +2,7 @@
 export PATH=$PATH:/home/yoav/.local/bin:/usr/bin
 
 function dx() {
-   docker exec -it $1 bash
+   docker exec -it $1 sh
 }
 
 # k8
@@ -12,7 +12,7 @@ alias kd='kubectl delete -k ./'
 alias kgp='kubectl get pods'
 
 # docker
-alias dlogs='docker logs '
+alias dlog='docker logs '
 alias dls='docker image ls'
 alias dps='docker ps -a'
 alias drmall='docker rm -f $(docker ps -a -q)'
@@ -45,7 +45,9 @@ alias cclass='~/linux-settings/scripts/create_c_class.sh '
 alias utest='~/linux-settings/scripts/create_utest.sh '
 
 # 42
-alias code='/Applications/Visual\ Studio\ Code\ 2.app/Contents/Resources/app/bin/code'
+alias code="$(find /Applications -name "code" 2> /dev/null | grep bin | sed 's/ /\\ /g')"
+# alias code='/Applications/Visual\ Studio\ Code\ 2.app/Contents/Resources/app/bin/code'
+# alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
 alias norm='norminette | grep -v OK'
 alias g='gcc -Wall -Werror -Wextra'
 alias gp='g++ -Wall -Werror -Wextra'
