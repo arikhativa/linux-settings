@@ -11,7 +11,7 @@ alias dls='docker image ls'
 alias dps='docker ps -a'
 alias drmall='docker rm -f $(docker ps -a -q)'
 alias drm='docker rm -f '
-alias drm='docker exec -it '
+alias dx='docker exec -it '
 
 # git
 alias gl='git log'
@@ -37,7 +37,7 @@ alias pullhub='git pull  https://github.com/arikhativa/$(basename `git rev-parse
 alias myalias='code ~/linux-settings/extra_alias'
 
 # 42
-alias code="$(find /Applications -name "code" 2> /dev/null | grep bin | sed 's/ /\\ /g')"
+#alias code="$(find /Applications -name "code" 2> /dev/null | grep bin | sed 's/ /\\ /g')"
 alias norm='norminette | grep -v OK'
 alias g='gcc -Wall -Werror -Wextra'
 alias gp='g++ -Wall -Werror -Wextra'
