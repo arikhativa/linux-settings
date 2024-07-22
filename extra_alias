@@ -12,6 +12,7 @@ alias dps='docker ps -a'
 alias drmall='docker rm -f $(docker ps -a -q)'
 alias drm='docker rm -f '
 alias dx='docker exec -it '
+alias dc='docker compose'
 
 # git
 alias gl='git log'
