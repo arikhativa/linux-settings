@@ -67,6 +67,13 @@ alias vlog='code /tmp/val.log'
 # export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | head -n 1 | awk '{print $2}'):0.0
 
 #clipboard
-alias "copy=xclip -selection clipboard"
-alias "v=xclip -o"
-alias "cb=git rev-parse --abbrev-ref HEAD | copy"
+if [ -n "$WSL_DISTRO_NAME" ]; then
+	alias "copy=clip.exe"
+	alias "v=xclip -o"
+	alias "cb=git rev-parse --abbrev-ref HEAD | copy"
+else
+	alias "copy=xclip -selection clipboard"
+	alias "v=xclip -o"
+	alias "cb=git rev-parse --abbrev-ref HEAD | copy"
+fi
+
