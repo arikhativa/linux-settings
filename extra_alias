@@ -1,4 +1,13 @@
 
+# ubuntu
+# maybe add this for the ctrl + . issue
+# gsettings set org.freedesktop.ibus.panel.emoji hotkey "[]"
+export REACT_EDITOR=code
+alias padmin='cd ~/avodaplusbackend/prisma && npx prisma admin && cd -'
+alias preset='cd ~/avodaplusbackend/prisma && echo y | npx prisma delete && cd - && yarn prisma'
+alias pseed='cd ~/avodaplusbackend/prisma && npx prisma reset -f && npx prisma seed && cd -'
+
+
 # k8
 alias k='kubectl'
 alias ka='kubectl apply -k ./'
@@ -12,7 +21,9 @@ alias dps='docker ps -a'
 alias drmall='docker rm -f $(docker ps -a -q)'
 alias drm='docker rm -f '
 alias dx='docker exec -it '
-alias dc='docker compose'
+alias dc='docker compose '
+alias dcrmall='docker compose down --volumes --rmi local'
+
 
 # git
 alias gl='git log'
@@ -29,6 +40,8 @@ alias gra='git rebase --abort'
 alias grc='git rebase --continue'
 alias gcp='git cherry-pick '
 alias grh='git reset --hard '
+alias gs='git stash'
+alias gsa='git stash apply'
 
 # github
 alias phub='git push  https://github.com/arikhativa/$(basename `git rev-parse --show-toplevel`)'
@@ -52,3 +65,8 @@ alias vlog='code /tmp/val.log'
 
 # minilibx
 # export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | head -n 1 | awk '{print $2}'):0.0
+
+#clipboard
+alias "copy=xclip -selection clipboard"
+alias "v=xclip -o"
+alias "cb=git rev-parse --abbrev-ref HEAD | copy"
