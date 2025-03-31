@@ -24,6 +24,7 @@ alias dx='docker exec -it '
 alias dc='docker compose '
 alias dcrmall='docker compose down --volumes --rmi local'
 
+
 # git
 alias gl='git log'
 alias add='git add .'
