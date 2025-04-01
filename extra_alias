@@ -78,3 +78,21 @@ else
 	alias "cb=git rev-parse --abbrev-ref HEAD | copy"
 fi
 
+to_ssh() {
+    # Get current remote URL
+    current_url=$(git remote get-url origin)
+
+    # Check if it's an HTTPS GitHub URL
+    if [[ "$current_url" =~ ^https://github\.com/ ]]; then
+        # Convert to SSH format
+        ssh_url=$(echo "$current_url" | sed -E 's#https://github.com/#git@github.com:#')
+
+        # Set the new SSH URL as the remote origin
+        git remote set-url origin "$ssh_url"
+
+        echo "Updated remote origin to SSH: $ssh_url"
+    else
+        echo "Current remote is not an HTTPS GitHub URL: $current_url"
+    fi
+}
+
